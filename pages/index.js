@@ -18,7 +18,7 @@ export default function Home({ trendingResults, followResults, providers }) {
     <div className="">
       <Head>
         <title>Home / Twitter</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/twit2.ico" />
       </Head>
 
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
