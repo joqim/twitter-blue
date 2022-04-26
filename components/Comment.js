@@ -25,8 +25,8 @@ function Comment({ comment }) {
               <span className="ml-1.5 text-sm sm:text-[15px]">
                 @{comment?.tag}{" "}
               </span>
-            </div>{" "}
-            ·{" "}
+            </div>
+            {" "}·{" "}
             <span className="hover:underline text-sm sm:text-[15px]">
               <Moment fromNow>{comment?.timestamp?.toDate()}</Moment>
             </span>
