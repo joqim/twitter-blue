@@ -98,13 +98,24 @@ function PostPage({ trendingResults, followResults, providers }) {
 export default PostPage;
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch("https://jsonkeeper.com/b/MJ2V").then(
-    (res) => res.json()
-  );
+  console.log("inside getServerSideProps")
+  // const trendingResults = await fetch("https://jsonkeeper.com/b/MJ2V").then(
+  //   (res) => {
+  //     console.log("res", res);
+  //     res.json()
+  //   }
+  // ).catch(err => {
+  //   console.log("err", err)
+  // });
+  const trendingResults = {}
+
   console.log("trendingResults", trendingResults)
   const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
     (res) => res.json()
-  );
+  ).catch(err => {
+    console.log("err", err)
+  });
+
   const providers = await getProviders();
   const session = await getSession(context);
 

@@ -36,12 +36,16 @@ export default function Home({ trendingResults, followResults, providers }) {
 }
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch("https://jsonkeeper.com/b/MJ2V").then(
+  const trendingResults = await fetch("https://www.jsonkeeper.com/b/MJ2V").then(
     (res) => res.json()
-  );
-  const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
+  ).catch(err => {
+    console.log("err", err)
+  });
+  const followResults = await fetch("https://www.jsonkeeper.com/b/WWMJ").then(
     (res) => res.json()
-  );
+  ).catch(err => {
+    console.log("err", err)
+  });
   const providers = await getProviders();
   const session = await getSession(context);
 
