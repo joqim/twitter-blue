@@ -32,11 +32,13 @@ function Sidebar() {
         <SidebarLink text="Profile" Icon={UserIcon} />
         <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
-      <button className="hidden xl:inline ml-auto bg-[#1d9bf0] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#1a8cd8]">
+      <button className="hidden xl:inline ml-auto bg-[#1d9bf0] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#1a8cd8]"
+        style={{marginBottom: "10px"}}
+      >
         Tweet
       </button>
       <div
-        className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverAnimation xl:ml-auto xl:-mr-10"
+        className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverAnimation xl:ml-auto"
         onClick={signOut}
       >
         <img
